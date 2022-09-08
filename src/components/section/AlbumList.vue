@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      
+      <SearchObj @search="getFilterAlbum" :albumArr="albumArr" />
       <div v-if="!loading">
         <AlbumObj
           v-for="(album, index) in callFilterArr"
@@ -16,6 +16,7 @@
   import axios from "axios";
   import AlbumObj from "../commons/AlbumObj.vue";
   import LoaderObj from "../commons/LoaderObj.vue";
+import SearchObj from "../commons/SearchObj.vue";
   
   
   export default {
@@ -31,7 +32,7 @@
     components: {
     AlbumObj,
     LoaderObj,
-    
+    SearchObj
 },
     created() {
       this.getAlbum();
