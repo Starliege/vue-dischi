@@ -20,7 +20,7 @@ import SearchObj from "../commons/SearchObj.vue";
   
   
   export default {
-    name: "ListaAlbum.vue",
+    name: "AlbumList.vue",
     data() {
       return {
         apiURL: "https://flynn.boolean.careers/exercises/api/array/music",
